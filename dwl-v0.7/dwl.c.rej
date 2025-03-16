@@ -1,0 +1,17 @@
+diff a/dwl.c b/dwl.c	(rejected hunks)
+@@ -413,6 +448,15 @@ static struct wlr_box sgeom;
+ static struct wl_list mons;
+ static Monitor *selmon;
+ 
++static char stext[256];
++static struct wl_event_source *status_event_source;
++
++static const struct wlr_buffer_impl buffer_impl = {
++    .destroy = bufdestroy,
++    .begin_data_ptr_access = bufdatabegin,
++    .end_data_ptr_access = bufdataend,
++};
++
+ #ifdef XWAYLAND
+ static void activatex11(struct wl_listener *listener, void *data);
+ static void associatex11(struct wl_listener *listener, void *data);
