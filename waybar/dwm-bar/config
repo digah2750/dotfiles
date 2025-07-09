@@ -1,0 +1,54 @@
+{
+	"layer": "top",	
+	"position": "top",
+    "height": 27,
+
+
+    "modules-left": ["hyprland/workspaces", "hyprland/window"],
+    "modules-center": [],
+    "modules-right": ["cpu", "memory", "clock", "tray"],
+
+
+	"hyprland/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "10": "0",
+            "11": "1",
+            "12": "2",
+            "13": "3",
+            "14": "4",
+            "15": "5",
+            "16": "6",
+            "17": "7",
+            "18": "8",
+            "19": "9",
+            "20": "0",
+            "urgent": "!"
+        }
+},
+
+
+	"hyprland/window": {
+    	"format": "{}",
+    	"max-length": 150
+},
+
+
+    "tray": {
+        "icon-size": 18,
+        "spacing": 15
+},
+
+
+    "clock": {
+        "format": "{:%R}",
+        "interval": 30
+},
+
+
+    "memory": {
+        "format": "{used}GB"
+},
+    
+
+}
